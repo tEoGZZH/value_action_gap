@@ -15,14 +15,14 @@ These two papers aim to answer the core concerning questions related to value al
 
 To address **RQ1** -- *Human-AI Value Alignment* -- we propose **ValueCompass**, a framework for systematically measuring value alignment between LLMs and humans across contextual scenarios. See below figure for an overview. 
 
-<img src="figures/figure-valuecompass.png" width="66%" alt="Description">
+<img src="figures/figure-valuecompass.png" width="58%" alt="Description">
 
 
 
 
 To address **RQ2** -- *LLM's Value-Action Alignment* -- we propose **ValueActionLens** Framework, associated with the VIA (Value-Informed Dataset) dataset, to assess the alignment between LLMs’ stated values & value-informed actions. See below figure for an example of GPT4o's Value-Action Gap. 
 
-<img src="figures/figure-value-action-gap.png" width="66%" alt="Description">
+<img src="figures/figure-value-action-gap.png" width="58%" alt="Description">
 
 
 
