@@ -17,16 +17,22 @@ from statement_prompting import StatementPrompting
 import pdb
 
 # add OPENAI_API_KEY to .env
-load_dotenv()
+# load_dotenv()
 
-# Example model usage. To use mistral, I think we need to use HuggingFace.
-MODEL = "openai:gpt-4o-mini"
-client = ai.Client()
+# # Example model usage. To use mistral, I think we need to use HuggingFace.
+# MODEL = "openai:gpt-4o-mini"
+# client = ai.Client()
+
+import argparse
+from ..hf_backend import HFChatModel
+
+hf_model = None
 
 
 def eval_value_statement(value, country, topic, outputs):
     """Evaluate the value statement of LLM for each setting.
     """
+    global hf_model
     prompting_method = StatementPrompting()
 
     ### Positive Value Actions
@@ -40,11 +46,8 @@ def eval_value_statement(value, country, topic, outputs):
         print(f"========{prompt_index}: {positive_action_prompt} \n" )
         # generated_value_statement = gpt_generation_gpt4o_mini(positive_action_prompt)
         # generated_value_statement = gpt_generation_mistral(positive_action_prompt)
-        generated_value_statement = client.chat.completions.create(
-            model=MODEL,
-            messages=[{"role": "user", "content": positive_action_prompt}]
-        )
-        outputs[f"evaluation_{prompt_index}"].append(generated_value_statement)
+        text = hf_model.chat(positive_action_prompt, temperature=0.2, max_new_tokens=256)
+        outputs[f"evaluation_{prompt_index}"].append(text)
     return 
 
 
@@ -113,6 +116,14 @@ def main():
     # }
 
 
+    global hf_model
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--model", required=True, help="HF model id (remote) or local path")
+    parser.add_argument("--out_csv", default="value_statement_results.csv")
+    args = parser.parse_args()
+
+    hf_model = HFChatModel(args.model)
+
     countries, topics, schwartz_values = human_annotation()
 
 
@@ -138,7 +149,7 @@ def main():
                 eval_value_statement(value, country, topic, outputs)
                 
 
-    output_path = '1201_eval_value_statement_gpt_mini.csv'
+    output_path = args.out_csv
     df = pd.DataFrame(outputs)
     df.to_csv(output_path)
 

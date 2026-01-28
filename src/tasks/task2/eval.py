@@ -1,17 +1,19 @@
-import aisuite as ai
-from dotenv import load_dotenv
+# import aisuite as ai
+# from dotenv import load_dotenv
 import json
 from tqdm import tqdm
 import pandas as pd
 
 from prompting import StatementPrompting
 from utils import parse_json
-load_dotenv()  
+# load_dotenv()  
 import pdb
 import random
 import numpy as np
 
-
+from ..hf_backend import HFChatModel
+import argparse
+hf_model = None
 
 # MODEL = "openai:gpt-4o"
 # MODEL = "openai:gpt-4o-mini"
@@ -20,15 +22,15 @@ import numpy as np
 # MODEL = "groq:DeepSeek-R1-Distill-Llama-70b"
 # MODEL = "groq:llama-3.3-70b-versatile"
 # MODEL = "groq:gemma2-9b-it"
-MODEL = "groq:qwen-qwq-32b"
+# MODEL = "groq:qwen-qwq-32b"
 
 
 
-client = ai.Client()
+# client = ai.Client()
 
 
 def eval_value_action(country, topic, value, option1, option2):
-
+    global hf_model
     prompting_method = StatementPrompting()
 
     outputs = {
@@ -49,26 +51,35 @@ def eval_value_action(country, topic, value, option1, option2):
 
     for prompt_index in tqdm(range(8)):
         action_prompt = prompting_method.generate_prompt(country=country, topic=topic, value=value, option1=option1, option2=option2, index=prompt_index)
-        response = client.chat.completions.create(
-            model=MODEL,
-            messages=[{"role": "user", "content": action_prompt[0]}],
-            temperature=0.2
-        )
+        # response = client.chat.completions.create(
+        #     model=MODEL,
+        #     messages=[{"role": "user", "content": action_prompt[0]}],
+        #     temperature=0.2
+        # )
+        text = hf_model.chat(action_prompt[0], temperature=0.2, max_new_tokens=256)
         try:
-            r = parse_json(response.choices[0].message.content)
+            r = parse_json(text)
         except:
-            raise ValueError(f"Failed to parse response: {response.choices[0].message.content}")
+            raise ValueError(f"Failed to parse response: {text}")
         outputs[f"evaluation_{prompt_index}"] = r
         print(f"{prompt_index} r={r}", )
     return outputs
 
 
 def main():
+    global hf_model
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--model", required=True, help="HF model id (remote) or local path")
+    parser.add_argument("--out_csv", default="evaluation_results.csv")
+    parser.add_argument("--sub_sample", action="store_true")
+    args = parser.parse_args()
+    hf_model = HFChatModel(args.model)
+
     sub_sample = False
 
     if sub_sample:
         sample_size = 50
-        df = pd.read_csv("/Users/huashen/Dropbox/000_5_Workspace/projects/1.value_action_gap/value_action_data/src/outputs/full_data/value_action_gap_full_data_gpt_4o_generation.csv")
+        df = pd.read_csv("/home/zs473554/projects/value_action_gap/src/outputs/full_data/value_action_gap_full_data_gpt_4o_generation.csv")
         # Generate all even numbers from 2 to 10000
         even_numbers = list(range(2, len(df), 2))
         # Randomly sample 100 even numbers (without replacement)
@@ -76,10 +87,10 @@ def main():
         sampled_odds = list(map(lambda x: x + 1, sampled_evens))
         index_list = np.sort(sampled_evens + sampled_odds)
         filtered_df = df.loc[index_list]
-        filtered_df.to_csv("/Users/huashen/Dropbox/000_5_Workspace/projects/1.value_action_gap/value_action_data/src/outputs/filtered_sample_value_action_evaluation_gpt_4o_mini.csv", index=False)
+        filtered_df.to_csv(args.out_csv, index=False)
         
     else:
-        df = pd.read_csv("/Users/huashen/Dropbox/000_5_Workspace/projects/1.value_action_gap/value_action_data/src/outputs/filtered_sample_value_action_evaluation_gpt_4o_mini.csv")
+        df = pd.read_csv("/home/zs473554/projects/value_action_gap/src/outputs/filtered_sample_value_action_evaluation_gpt_4o_mini.csv")
 
         results = []
         # Group by country, topic, and absolute value to pair opposite polarities
@@ -126,7 +137,7 @@ def main():
 
 
         result_df = pd.DataFrame(results)
-        result_df.to_csv("/Users/huashen/Dropbox/000_5_Workspace/projects/1.value_action_gap/value_action_data/src/outputs/task2_results_qwen.csv", index=False)
+        result_df.to_csv(args.out_csv, index=False)
 
 
 if __name__ == "__main__":
