@@ -1,4 +1,4 @@
-aisuite==0.1.6
+# aisuite==0.1.6
 annotated-types==0.7.0
 anyio==4.7.0
 argon2-cffi==23.1.0
@@ -27,7 +27,8 @@ httpx==0.28.1
 idna==3.10
 ipdb==0.13.13
 ipykernel==6.29.5
-ipython==8.30.0
+# ipython==8.30.0
+ipython==8.18.1
 ipywidgets==8.1.5
 isoduration==20.11.0
 jedi==0.19.2
@@ -59,7 +60,8 @@ nbformat==5.10.4
 nest-asyncio==1.6.0
 notebook==7.3.1
 notebook_shim==0.2.4
-numpy==2.2.0
+# numpy==2.2.0
+numpy==2.0.2
 openai==1.57.2
 overrides==7.7.0
 packaging==24.2
