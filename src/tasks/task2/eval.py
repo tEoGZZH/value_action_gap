@@ -4,14 +4,14 @@ import json
 from tqdm import tqdm
 import pandas as pd
 
-from prompting import StatementPrompting
-from utils import parse_json
+from tasks.task2.prompting import StatementPrompting
+from tasks.task2.utils import parse_json
 # load_dotenv()  
 import pdb
 import random
 import numpy as np
 
-from ..hf_backend import HFChatModel
+from tasks.hf_backend import HFChatModel
 import argparse
 hf_model = None
 

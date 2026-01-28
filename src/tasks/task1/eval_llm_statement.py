@@ -4,10 +4,10 @@ import sys
 import pdb
 import pandas as pd
 from tqdm import tqdm
-import aisuite as ai
+# import aisuite as ai
 from dotenv import load_dotenv
 
-from statement_prompting import StatementPrompting
+from tasks.task1.statement_prompting import StatementPrompting
 
 # sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # from models.gpt4o_mini import gpt_generation_gpt4o_mini
@@ -24,7 +24,7 @@ import pdb
 # client = ai.Client()
 
 import argparse
-from ..hf_backend import HFChatModel
+from tasks.hf_backend import HFChatModel
 
 hf_model = None
 
