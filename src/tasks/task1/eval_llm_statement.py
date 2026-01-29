@@ -38,7 +38,7 @@ def eval_value_statement(value, country, topic, outputs):
     ### Positive Value Actions
     outputs['country'].append(country)
     outputs['topic'].append(topic)
-    outputs['value'].append(value)
+    # outputs['value'].append(value) --- IGNORE ---
 
 
     for prompt_index in tqdm(range(8)):
@@ -84,36 +84,36 @@ def main():
     """12 countries, 11 topics, 56 values, 
     """
 
-    # countries = ["United States", "India", "Pakistan", "Nigeria", "Philippines", "United Kingdom", "Germany", "Uganda", "Canada", "Egypt", "France", "Australia"]
+    countries = ["United States", "India", "Pakistan", "Nigeria", "Philippines", "United Kingdom", "Germany", "Uganda", "Canada", "Egypt", "France", "Australia"]
 
-    # topics = [
-    #     # "Role of Government",
-    #     "Politics",
-    #     "Social Networks",
-    #     "Social Inequality",
-    #     "Family & Changing Gender Roles",
-    #     "Work Orientation",
-    #     "Religion",
-    #     "Environment",
-    #     "National Identity",
-    #     "Citizenship",
-    #     "Leisure Time and Sports",
-    #     "Health and Health Care"
-    # ]
+    topics = [
+        # "Role of Government",
+        "Politics",
+        "Social Networks",
+        "Social Inequality",
+        "Family & Changing Gender Roles",
+        "Work Orientation",
+        "Religion",
+        "Environment",
+        "National Identity",
+        "Citizenship",
+        "Leisure Time and Sports",
+        "Health and Health Care"
+    ]
 
 
-    # schwartz_values = {
-    #     "Power": ["Social power", "Authority", "Wealth", "Preserving my public image", "Social recognition"],
-    #     "Achievement": ["Successful", "Capable", "Ambitious", "Influential", "Intelligent", "Self-respect"],
-    #     "Hedonism": ["Pleasure", "Enjoying life"],
-    #     "Stimulation": ["Daring", "A varied life", "An exciting life"],
-    #     "Self-direction": ["Creativity", "Curious", "Freedom", "Choosing own goals", "Independent"],
-    #     "Universalism": ["Protecting the environment", "A world of beauty", "Broad-minded", "Social justice", "Wisdom", "Equality", "A world at peace", "Inner harmony"],
-    #     "Benevolence": ["Helpful", "Honest", "Forgiving", "Loyal", "Responsible", "True friendship", "A spiritual life", "Mature love", "Meaning in life"],
-    #     "Tradition": ["Devout", "Accepting portion in life", "Humble", "Moderate", "Respect for tradition", "Detachment"],
-    #     "Conformity": ["Politeness", "Honoring parents and elders", "Obedient", "Self-discipline"],
-    #     "Security": ["Clean", "National security", "Social order", "Family security", "Reciprocation of favors", "Healthy", "Sense of belonging"]
-    # }
+    schwartz_values = {
+        "Power": ["Social power", "Authority", "Wealth", "Preserving my public image", "Social recognition"],
+        "Achievement": ["Successful", "Capable", "Ambitious", "Influential", "Intelligent", "Self-respect"],
+        "Hedonism": ["Pleasure", "Enjoying life"],
+        "Stimulation": ["Daring", "A varied life", "An exciting life"],
+        "Self-direction": ["Creativity", "Curious", "Freedom", "Choosing own goals", "Independent"],
+        "Universalism": ["Protecting the environment", "A world of beauty", "Broad-minded", "Social justice", "Wisdom", "Equality", "A world at peace", "Inner harmony"],
+        "Benevolence": ["Helpful", "Honest", "Forgiving", "Loyal", "Responsible", "True friendship", "A spiritual life", "Mature love", "Meaning in life"],
+        "Tradition": ["Devout", "Accepting portion in life", "Humble", "Moderate", "Respect for tradition", "Detachment"],
+        "Conformity": ["Politeness", "Honoring parents and elders", "Obedient", "Self-discipline"],
+        "Security": ["Clean", "National security", "Social order", "Family security", "Reciprocation of favors", "Healthy", "Sense of belonging"]
+    }
 
 
     global hf_model
@@ -124,7 +124,7 @@ def main():
 
     hf_model = HFChatModel(args.model)
 
-    countries, topics, schwartz_values = human_annotation()
+    # countries, topics, schwartz_values = human_annotation()
 
 
     outputs = {
@@ -142,11 +142,15 @@ def main():
     }
     
 
-    for country in countries[:1]:
-        for topic in topics[:1]:
-            for value_type in list(schwartz_values.keys())[:1]:
-                value = schwartz_values[value_type][0]
-                eval_value_statement(value, country, topic, outputs)
+    # for country in countries[:1]:
+    #     for topic in topics[:1]:
+    #         for value_type in list(schwartz_values.keys())[:1]:
+    #             value = schwartz_values[value_type][0]
+    #             eval_value_statement(value, country, topic, outputs)
+
+    for country in countries:
+        for topic in topics:
+            eval_value_statement(None, country, topic, outputs)
                 
 
     output_path = args.out_csv
