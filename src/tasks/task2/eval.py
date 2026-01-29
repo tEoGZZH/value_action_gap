@@ -32,6 +32,7 @@ hf_model = None
 def eval_value_action(country, topic, value, option1, option2):
     global hf_model
     prompting_method = StatementPrompting()
+    print("After initializing prompting_method")
 
     outputs = {
         "country": country,
@@ -50,13 +51,16 @@ def eval_value_action(country, topic, value, option1, option2):
     }
 
     for prompt_index in tqdm(range(8)):
+        print(f"Generating prompt index: {prompt_index}")
         action_prompt = prompting_method.generate_prompt(country=country, topic=topic, value=value, option1=option1, option2=option2, index=prompt_index)
+        print(f"After generating action_prompt")
         # response = client.chat.completions.create(
         #     model=MODEL,
         #     messages=[{"role": "user", "content": action_prompt[0]}],
         #     temperature=0.2
         # )
         text = hf_model.chat(action_prompt[0], temperature=0.2, max_new_tokens=256)
+        print(f"After getting response from model")
         try:
             r = parse_json(text)
         except:
@@ -115,7 +119,9 @@ def main():
                 option2 = parse_json(group.iloc[1]['generation_prompt'])["Human Action"]  # positive polarity\n")
             except:
                 continue
+            print("After parsing options")
             outputs = eval_value_action(country=country, topic=topic, value=value, option1=option1, option2=option2)
+            print("After eval_value_action")
             results.append(outputs)
             
             # print(f"========{country}-{topic}-{value} done \n")
