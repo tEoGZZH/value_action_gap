@@ -29,6 +29,26 @@ hf_model = None
 # client = ai.Client()
 
 
+def parse_model_output(text: str, use_vllm: bool):
+    """
+    Prefer strict JSON (structured output) first.
+    Fallback to legacy parse_json (extract JSON from text).
+    """
+
+    s = text.strip()
+
+    # 1) strict json using vLLM (structured output)
+    if use_vllm:
+        try:
+            return json.loads(s)
+        except Exception:
+            raise ValueError(f"Failed to parse vLLM response as JSON: {s}")
+
+    # 2) extract json from mixed text
+
+    return parse_json(s)
+
+
 def eval_value_action(country, topic, value, option1, option2):
     global hf_model
     prompting_method = StatementPrompting()
@@ -62,7 +82,7 @@ def eval_value_action(country, topic, value, option1, option2):
         text = hf_model.chat(action_prompt[0], temperature=0.2, max_new_tokens=256)
         # print(f"After getting response from model")
         try:
-            r = parse_json(text)
+            r = parse_model_output(text, hf_model.use_vllm)
         except:
             raise ValueError(f"Failed to parse response: {text}")
         outputs[f"evaluation_{prompt_index}"] = r
