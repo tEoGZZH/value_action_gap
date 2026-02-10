@@ -114,8 +114,8 @@ def main():
         filtered_df.to_csv(args.out_csv, index=False)
         
     else:
-        # df = pd.read_csv("/home/zs473554/projects/value_action_gap/src/outputs/filtered_sample_value_action_evaluation_gpt_4o_mini.csv")
-        df = pd.read_csv("/home/zs473554/projects/value_action_gap/src/outputs/full_data/value_action_gap_full_data_gpt_4o_generation.csv")
+        df = pd.read_csv("/home/zs473554/projects/value_action_gap/src/outputs/filtered_sample_value_action_evaluation_gpt_4o_mini.csv")
+        # df = pd.read_csv("/home/zs473554/projects/value_action_gap/src/outputs/full_data/value_action_gap_full_data_gpt_4o_generation.csv")
 
         results = []
         # Group by country, topic, and absolute value to pair opposite polarities
