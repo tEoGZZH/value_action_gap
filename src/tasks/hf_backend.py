@@ -36,6 +36,7 @@ class HFChatModel:
         self.use_vllm: bool = self.vllm_base_url is not None
         
         # Only load local model/tokenizer if we are NOT using vLLM.
+        print(f"Using vLLM: {self.use_vllm}")
         if self.use_vllm:
             self.tokenizer = None
             self.model = None
