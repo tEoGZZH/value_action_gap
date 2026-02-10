@@ -130,7 +130,7 @@ def main():
     outputs = {
         "country": [],
         "topic": [],
-        "value": [],
+        # "value": [],
         "evaluation_0": [],
         "evaluation_1": [],
         "evaluation_2": [],
