@@ -77,6 +77,7 @@ class HFChatModel:
                 "type": "json_schema",
                 "json_schema": EVAL_JSON_SCHEMA,
             },
+            "max_tokens": 512,
         }
 
         resp = requests.post(url, json=payload, timeout=self.vllm_timeout_s)
