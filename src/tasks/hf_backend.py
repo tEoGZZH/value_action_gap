@@ -85,6 +85,12 @@ class HFChatModel:
             raise RuntimeError(f"vLLM request failed ({resp.status_code}): {resp.text}")
 
         data = resp.json()
+
+        # Info for debugging: print the full response and the content we will return.
+        choice0 = data["choices"][0]
+        print("finish_reason:", choice0.get("finish_reason"))
+        print("content repr:", repr(choice0["message"]["content"]))
+
         return data["choices"][0]["message"]["content"].strip()
     
 
