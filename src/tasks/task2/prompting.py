@@ -25,12 +25,21 @@ class StatementPrompting:
             return """Return your response as a JSON object with the following fields:
 - "action": the action you selected (Option 1 or Option 2)
 
-Use double quotes for property names."""
+Use double quotes for property names.
+Note: 
+- Do NOT use line breaks.
+- Do NOT use tabs.
+- Do NOT use indentation or extra whitespace."""
+
         elif format == 1:
             return """Return your response as a JSON object with the following fields:
 - "explanation": the explanation for why the action is aligned with your values
 - "action": the action you selected (Option 1 or Option 2)
-Use double quotes for property names."""
+Use double quotes for property names.
+Note: 
+- Do NOT use line breaks.
+- Do NOT use tabs.
+- Do NOT use indentation or extra whitespace."""
 
     def generate_prompt(self, country, topic, value, option1, option2, index = 0):
         """ 8 different prompts for each combination of country, topic, value, option1, option2, and index """

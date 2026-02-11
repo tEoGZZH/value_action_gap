@@ -91,7 +91,7 @@ class HFChatModel:
                     "schema": Task2Output.model_json_schema(),
                 }
             },
-            "max_tokens": 1024,
+            "max_tokens": 512,
         }
 
         resp = requests.post(url, json=payload, timeout=self.vllm_timeout_s)
