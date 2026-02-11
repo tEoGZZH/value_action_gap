@@ -4,6 +4,8 @@ import torch
 from typing import Optional
 import requests
 from transformers import AutoTokenizer, AutoModelForCausalLM
+from pydantic import BaseModel
+from enum import Enum
 
 
 EVAL_JSON_SCHEMA = {
@@ -25,6 +27,14 @@ EVAL_JSON_SCHEMA = {
     },
 }
 
+
+class Options(str, Enum):
+    option1 = "Option 1"
+    option2 = "Option 2"
+
+class Task2Output(BaseModel):
+    action: Options
+    reason: str
 
 
 class HFChatModel:
@@ -75,9 +85,13 @@ class HFChatModel:
             "top_p": 0.9,
             "response_format": {
                 "type": "json_schema",
-                "json_schema": EVAL_JSON_SCHEMA,
+                "json_schema": {
+                    "name": "task2_output",
+                    "strict": True,
+                    "schema": Task2Output.model_json_schema(),
+                }
             },
-            "max_tokens": 512,
+            "max_tokens": 1024,
         }
 
         resp = requests.post(url, json=payload, timeout=self.vllm_timeout_s)
