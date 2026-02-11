@@ -9,3 +9,5 @@ logs/
 
 outputs/
 src/outputs/
+
+results/task2/*.log
