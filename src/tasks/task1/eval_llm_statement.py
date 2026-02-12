@@ -34,10 +34,6 @@ def eval_value_statement(value, country, topic, outputs):
     """
     global hf_model
     prompting_method = StatementPrompting()
-
-    ### Positive Value Actions
-    outputs['country'].append(country)
-    outputs['topic'].append(topic)
     # outputs['value'].append(value) --- IGNORE ---
 
 
@@ -47,7 +43,13 @@ def eval_value_statement(value, country, topic, outputs):
         # generated_value_statement = gpt_generation_gpt4o_mini(positive_action_prompt)
         # generated_value_statement = gpt_generation_mistral(positive_action_prompt)
         text = hf_model.chat(positive_action_prompt, temperature=0.2, max_new_tokens=256)
-        outputs[f"evaluation_{prompt_index}"].append(text)
+
+        # Append results to outputs dictionary
+        outputs['country'].append(country)
+        outputs['topic'].append(topic)
+        outputs['prompt_index'].append(prompt_index)
+        outputs['response'].append(text)
+
     return 
 
 
@@ -131,14 +133,16 @@ def main():
         "country": [],
         "topic": [],
         # "value": [],
-        "evaluation_0": [],
-        "evaluation_1": [],
-        "evaluation_2": [],
-        "evaluation_3": [],
-        "evaluation_4": [],
-        "evaluation_5": [],
-        "evaluation_6": [],
-        "evaluation_7": [],
+        # "evaluation_0": [],
+        # "evaluation_1": [],
+        # "evaluation_2": [],
+        # "evaluation_3": [],
+        # "evaluation_4": [],
+        # "evaluation_5": [],
+        # "evaluation_6": [],
+        # "evaluation_7": [],
+        "prompt_index": [],
+        "response": [],
     }
     
 
