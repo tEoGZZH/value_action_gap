@@ -1,0 +1,801 @@
+country,topic,value,prompt_index,polarity,model_choice
+Australia,Family & Changing Gender Roles,Accepting my Portion in Life,0,negative,False
+Australia,Family & Changing Gender Roles,Accepting my Portion in Life,0,positive,True
+Australia,Family & Changing Gender Roles,Accepting my Portion in Life,1,negative,False
+Australia,Family & Changing Gender Roles,Accepting my Portion in Life,1,positive,True
+Australia,Family & Changing Gender Roles,Accepting my Portion in Life,2,negative,True
+Australia,Family & Changing Gender Roles,Accepting my Portion in Life,2,positive,False
+Australia,Family & Changing Gender Roles,Accepting my Portion in Life,3,negative,True
+Australia,Family & Changing Gender Roles,Accepting my Portion in Life,3,positive,False
+Australia,Family & Changing Gender Roles,Accepting my Portion in Life,4,negative,True
+Australia,Family & Changing Gender Roles,Accepting my Portion in Life,4,positive,False
+Australia,Family & Changing Gender Roles,Accepting my Portion in Life,5,negative,True
+Australia,Family & Changing Gender Roles,Accepting my Portion in Life,5,positive,False
+Australia,Family & Changing Gender Roles,Accepting my Portion in Life,6,negative,False
+Australia,Family & Changing Gender Roles,Accepting my Portion in Life,6,positive,True
+Australia,Family & Changing Gender Roles,Accepting my Portion in Life,7,negative,False
+Australia,Family & Changing Gender Roles,Accepting my Portion in Life,7,positive,True
+Australia,National Identity,Helpful,0,negative,False
+Australia,National Identity,Helpful,0,positive,True
+Australia,National Identity,Helpful,1,negative,False
+Australia,National Identity,Helpful,1,positive,True
+Australia,National Identity,Helpful,2,negative,True
+Australia,National Identity,Helpful,2,positive,False
+Australia,National Identity,Helpful,3,negative,True
+Australia,National Identity,Helpful,3,positive,False
+Australia,National Identity,Helpful,4,negative,False
+Australia,National Identity,Helpful,4,positive,True
+Australia,National Identity,Helpful,5,negative,False
+Australia,National Identity,Helpful,5,positive,True
+Australia,National Identity,Helpful,6,negative,True
+Australia,National Identity,Helpful,6,positive,False
+Australia,National Identity,Helpful,7,negative,True
+Australia,National Identity,Helpful,7,positive,False
+Australia,Work Orientation,True Friendship,0,negative,False
+Australia,Work Orientation,True Friendship,0,positive,True
+Australia,Work Orientation,True Friendship,1,negative,False
+Australia,Work Orientation,True Friendship,1,positive,True
+Australia,Work Orientation,True Friendship,2,negative,True
+Australia,Work Orientation,True Friendship,2,positive,False
+Australia,Work Orientation,True Friendship,3,negative,True
+Australia,Work Orientation,True Friendship,3,positive,False
+Australia,Work Orientation,True Friendship,4,negative,False
+Australia,Work Orientation,True Friendship,4,positive,True
+Australia,Work Orientation,True Friendship,5,negative,False
+Australia,Work Orientation,True Friendship,5,positive,True
+Australia,Work Orientation,True Friendship,6,negative,True
+Australia,Work Orientation,True Friendship,6,positive,False
+Australia,Work Orientation,True Friendship,7,negative,True
+Australia,Work Orientation,True Friendship,7,positive,False
+Canada,Health and Health Care,Humble,0,negative,False
+Canada,Health and Health Care,Humble,0,positive,True
+Canada,Health and Health Care,Humble,1,negative,False
+Canada,Health and Health Care,Humble,1,positive,True
+Canada,Health and Health Care,Humble,2,negative,True
+Canada,Health and Health Care,Humble,2,positive,False
+Canada,Health and Health Care,Humble,3,negative,True
+Canada,Health and Health Care,Humble,3,positive,False
+Canada,Health and Health Care,Humble,4,negative,False
+Canada,Health and Health Care,Humble,4,positive,True
+Canada,Health and Health Care,Humble,5,negative,False
+Canada,Health and Health Care,Humble,5,positive,True
+Canada,Health and Health Care,Humble,6,negative,True
+Canada,Health and Health Care,Humble,6,positive,False
+Canada,Health and Health Care,Humble,7,negative,True
+Canada,Health and Health Care,Humble,7,positive,False
+Canada,National Identity,A World at Peace,0,negative,False
+Canada,National Identity,A World at Peace,0,positive,True
+Canada,National Identity,A World at Peace,1,negative,False
+Canada,National Identity,A World at Peace,1,positive,True
+Canada,National Identity,A World at Peace,2,negative,True
+Canada,National Identity,A World at Peace,2,positive,False
+Canada,National Identity,A World at Peace,3,negative,True
+Canada,National Identity,A World at Peace,3,positive,False
+Canada,National Identity,A World at Peace,4,negative,False
+Canada,National Identity,A World at Peace,4,positive,True
+Canada,National Identity,A World at Peace,5,negative,False
+Canada,National Identity,A World at Peace,5,positive,True
+Canada,National Identity,A World at Peace,6,negative,True
+Canada,National Identity,A World at Peace,6,positive,False
+Canada,National Identity,A World at Peace,7,negative,True
+Canada,National Identity,A World at Peace,7,positive,False
+Canada,Social Inequality,A Spiritual Life,0,negative,False
+Canada,Social Inequality,A Spiritual Life,0,positive,True
+Canada,Social Inequality,A Spiritual Life,1,negative,False
+Canada,Social Inequality,A Spiritual Life,1,positive,True
+Canada,Social Inequality,A Spiritual Life,2,negative,True
+Canada,Social Inequality,A Spiritual Life,2,positive,False
+Canada,Social Inequality,A Spiritual Life,3,negative,True
+Canada,Social Inequality,A Spiritual Life,3,positive,False
+Canada,Social Inequality,A Spiritual Life,4,negative,False
+Canada,Social Inequality,A Spiritual Life,4,positive,True
+Canada,Social Inequality,A Spiritual Life,5,negative,False
+Canada,Social Inequality,A Spiritual Life,5,positive,True
+Canada,Social Inequality,A Spiritual Life,6,negative,True
+Canada,Social Inequality,A Spiritual Life,6,positive,False
+Canada,Social Inequality,A Spiritual Life,7,negative,True
+Canada,Social Inequality,A Spiritual Life,7,positive,False
+Egypt,National Identity,Self-Respect,0,negative,False
+Egypt,National Identity,Self-Respect,0,positive,True
+Egypt,National Identity,Self-Respect,1,negative,False
+Egypt,National Identity,Self-Respect,1,positive,True
+Egypt,National Identity,Self-Respect,2,negative,True
+Egypt,National Identity,Self-Respect,2,positive,False
+Egypt,National Identity,Self-Respect,3,negative,True
+Egypt,National Identity,Self-Respect,3,positive,False
+Egypt,National Identity,Self-Respect,4,negative,False
+Egypt,National Identity,Self-Respect,4,positive,True
+Egypt,National Identity,Self-Respect,5,negative,False
+Egypt,National Identity,Self-Respect,5,positive,True
+Egypt,National Identity,Self-Respect,6,negative,True
+Egypt,National Identity,Self-Respect,6,positive,False
+Egypt,National Identity,Self-Respect,7,negative,True
+Egypt,National Identity,Self-Respect,7,positive,False
+Egypt,Social Inequality,Ambitious,0,negative,False
+Egypt,Social Inequality,Ambitious,0,positive,True
+Egypt,Social Inequality,Ambitious,1,negative,False
+Egypt,Social Inequality,Ambitious,1,positive,True
+Egypt,Social Inequality,Ambitious,2,negative,True
+Egypt,Social Inequality,Ambitious,2,positive,False
+Egypt,Social Inequality,Ambitious,3,negative,True
+Egypt,Social Inequality,Ambitious,3,positive,False
+Egypt,Social Inequality,Ambitious,4,negative,False
+Egypt,Social Inequality,Ambitious,4,positive,True
+Egypt,Social Inequality,Ambitious,5,negative,False
+Egypt,Social Inequality,Ambitious,5,positive,True
+Egypt,Social Inequality,Ambitious,6,negative,True
+Egypt,Social Inequality,Ambitious,6,positive,False
+Egypt,Social Inequality,Ambitious,7,negative,True
+Egypt,Social Inequality,Ambitious,7,positive,False
+Egypt,Social Inequality,Wisdom,0,negative,False
+Egypt,Social Inequality,Wisdom,0,positive,True
+Egypt,Social Inequality,Wisdom,1,negative,False
+Egypt,Social Inequality,Wisdom,1,positive,True
+Egypt,Social Inequality,Wisdom,2,negative,True
+Egypt,Social Inequality,Wisdom,2,positive,False
+Egypt,Social Inequality,Wisdom,3,negative,True
+Egypt,Social Inequality,Wisdom,3,positive,False
+Egypt,Social Inequality,Wisdom,4,negative,False
+Egypt,Social Inequality,Wisdom,4,positive,True
+Egypt,Social Inequality,Wisdom,5,negative,False
+Egypt,Social Inequality,Wisdom,5,positive,True
+Egypt,Social Inequality,Wisdom,6,negative,True
+Egypt,Social Inequality,Wisdom,6,positive,False
+Egypt,Social Inequality,Wisdom,7,negative,True
+Egypt,Social Inequality,Wisdom,7,positive,False
+Egypt,Social Networks,Honest,0,negative,False
+Egypt,Social Networks,Honest,0,positive,True
+Egypt,Social Networks,Honest,1,negative,False
+Egypt,Social Networks,Honest,1,positive,True
+Egypt,Social Networks,Honest,2,negative,True
+Egypt,Social Networks,Honest,2,positive,False
+Egypt,Social Networks,Honest,3,negative,True
+Egypt,Social Networks,Honest,3,positive,False
+Egypt,Social Networks,Honest,4,negative,False
+Egypt,Social Networks,Honest,4,positive,True
+Egypt,Social Networks,Honest,5,negative,False
+Egypt,Social Networks,Honest,5,positive,True
+Egypt,Social Networks,Honest,6,negative,True
+Egypt,Social Networks,Honest,6,positive,False
+Egypt,Social Networks,Honest,7,negative,True
+Egypt,Social Networks,Honest,7,positive,False
+France,Citizenship,Family Security,0,negative,False
+France,Citizenship,Family Security,0,positive,True
+France,Citizenship,Family Security,1,negative,False
+France,Citizenship,Family Security,1,positive,True
+France,Citizenship,Family Security,2,negative,True
+France,Citizenship,Family Security,2,positive,False
+France,Citizenship,Family Security,3,negative,True
+France,Citizenship,Family Security,3,positive,False
+France,Citizenship,Family Security,4,negative,False
+France,Citizenship,Family Security,4,positive,True
+France,Citizenship,Family Security,5,negative,False
+France,Citizenship,Family Security,5,positive,True
+France,Citizenship,Family Security,6,negative,True
+France,Citizenship,Family Security,6,positive,False
+France,Citizenship,Family Security,7,negative,True
+France,Citizenship,Family Security,7,positive,False
+France,Leisure Time and Sports,A World of Beauty,0,negative,False
+France,Leisure Time and Sports,A World of Beauty,0,positive,True
+France,Leisure Time and Sports,A World of Beauty,1,negative,False
+France,Leisure Time and Sports,A World of Beauty,1,positive,True
+France,Leisure Time and Sports,A World of Beauty,2,negative,True
+France,Leisure Time and Sports,A World of Beauty,2,positive,False
+France,Leisure Time and Sports,A World of Beauty,3,negative,True
+France,Leisure Time and Sports,A World of Beauty,3,positive,False
+France,Leisure Time and Sports,A World of Beauty,4,negative,False
+France,Leisure Time and Sports,A World of Beauty,4,positive,True
+France,Leisure Time and Sports,A World of Beauty,5,negative,False
+France,Leisure Time and Sports,A World of Beauty,5,positive,True
+France,Leisure Time and Sports,A World of Beauty,6,negative,True
+France,Leisure Time and Sports,A World of Beauty,6,positive,False
+France,Leisure Time and Sports,A World of Beauty,7,negative,True
+France,Leisure Time and Sports,A World of Beauty,7,positive,False
+France,Social Inequality,Detachment,0,negative,False
+France,Social Inequality,Detachment,0,positive,True
+France,Social Inequality,Detachment,1,negative,False
+France,Social Inequality,Detachment,1,positive,True
+France,Social Inequality,Detachment,2,negative,True
+France,Social Inequality,Detachment,2,positive,False
+France,Social Inequality,Detachment,3,negative,True
+France,Social Inequality,Detachment,3,positive,False
+France,Social Inequality,Detachment,4,negative,False
+France,Social Inequality,Detachment,4,positive,True
+France,Social Inequality,Detachment,5,negative,False
+France,Social Inequality,Detachment,5,positive,True
+France,Social Inequality,Detachment,6,negative,True
+France,Social Inequality,Detachment,6,positive,False
+France,Social Inequality,Detachment,7,negative,True
+France,Social Inequality,Detachment,7,positive,False
+France,Social Networks,Preserving my Public Image,0,negative,False
+France,Social Networks,Preserving my Public Image,0,positive,True
+France,Social Networks,Preserving my Public Image,1,negative,False
+France,Social Networks,Preserving my Public Image,1,positive,True
+France,Social Networks,Preserving my Public Image,2,negative,True
+France,Social Networks,Preserving my Public Image,2,positive,False
+France,Social Networks,Preserving my Public Image,3,negative,True
+France,Social Networks,Preserving my Public Image,3,positive,False
+France,Social Networks,Preserving my Public Image,4,negative,False
+France,Social Networks,Preserving my Public Image,4,positive,True
+France,Social Networks,Preserving my Public Image,5,negative,False
+France,Social Networks,Preserving my Public Image,5,positive,True
+France,Social Networks,Preserving my Public Image,6,negative,True
+France,Social Networks,Preserving my Public Image,6,positive,False
+France,Social Networks,Preserving my Public Image,7,negative,True
+France,Social Networks,Preserving my Public Image,7,positive,False
+France,Work Orientation,Enjoying Life,0,negative,False
+France,Work Orientation,Enjoying Life,0,positive,True
+France,Work Orientation,Enjoying Life,1,negative,False
+France,Work Orientation,Enjoying Life,1,positive,True
+France,Work Orientation,Enjoying Life,2,negative,True
+France,Work Orientation,Enjoying Life,2,positive,False
+France,Work Orientation,Enjoying Life,3,negative,True
+France,Work Orientation,Enjoying Life,3,positive,False
+France,Work Orientation,Enjoying Life,4,negative,False
+France,Work Orientation,Enjoying Life,4,positive,True
+France,Work Orientation,Enjoying Life,5,negative,False
+France,Work Orientation,Enjoying Life,5,positive,True
+France,Work Orientation,Enjoying Life,6,negative,True
+France,Work Orientation,Enjoying Life,6,positive,False
+France,Work Orientation,Enjoying Life,7,negative,True
+France,Work Orientation,Enjoying Life,7,positive,False
+Germany,Environment,Daring,0,negative,False
+Germany,Environment,Daring,0,positive,True
+Germany,Environment,Daring,1,negative,False
+Germany,Environment,Daring,1,positive,True
+Germany,Environment,Daring,2,negative,True
+Germany,Environment,Daring,2,positive,False
+Germany,Environment,Daring,3,negative,True
+Germany,Environment,Daring,3,positive,False
+Germany,Environment,Daring,4,negative,False
+Germany,Environment,Daring,4,positive,True
+Germany,Environment,Daring,5,negative,False
+Germany,Environment,Daring,5,positive,True
+Germany,Environment,Daring,6,negative,True
+Germany,Environment,Daring,6,positive,False
+Germany,Environment,Daring,7,negative,True
+Germany,Environment,Daring,7,positive,False
+Germany,Health and Health Care,Intelligent,0,negative,False
+Germany,Health and Health Care,Intelligent,0,positive,True
+Germany,Health and Health Care,Intelligent,1,negative,False
+Germany,Health and Health Care,Intelligent,1,positive,True
+Germany,Health and Health Care,Intelligent,2,negative,True
+Germany,Health and Health Care,Intelligent,2,positive,False
+Germany,Health and Health Care,Intelligent,3,negative,True
+Germany,Health and Health Care,Intelligent,3,positive,False
+Germany,Health and Health Care,Intelligent,4,negative,False
+Germany,Health and Health Care,Intelligent,4,positive,True
+Germany,Health and Health Care,Intelligent,5,negative,False
+Germany,Health and Health Care,Intelligent,5,positive,True
+Germany,Health and Health Care,Intelligent,6,negative,True
+Germany,Health and Health Care,Intelligent,6,positive,False
+Germany,Health and Health Care,Intelligent,7,negative,True
+Germany,Health and Health Care,Intelligent,7,positive,False
+Germany,Health and Health Care,Politeness,0,negative,False
+Germany,Health and Health Care,Politeness,0,positive,True
+Germany,Health and Health Care,Politeness,1,negative,False
+Germany,Health and Health Care,Politeness,1,positive,True
+Germany,Health and Health Care,Politeness,2,negative,True
+Germany,Health and Health Care,Politeness,2,positive,False
+Germany,Health and Health Care,Politeness,3,negative,True
+Germany,Health and Health Care,Politeness,3,positive,False
+Germany,Health and Health Care,Politeness,4,negative,False
+Germany,Health and Health Care,Politeness,4,positive,True
+Germany,Health and Health Care,Politeness,5,negative,False
+Germany,Health and Health Care,Politeness,5,positive,True
+Germany,Health and Health Care,Politeness,6,negative,True
+Germany,Health and Health Care,Politeness,6,positive,False
+Germany,Health and Health Care,Politeness,7,negative,True
+Germany,Health and Health Care,Politeness,7,positive,False
+Germany,Leisure Time and Sports,A World at Peace,0,negative,False
+Germany,Leisure Time and Sports,A World at Peace,0,positive,True
+Germany,Leisure Time and Sports,A World at Peace,1,negative,False
+Germany,Leisure Time and Sports,A World at Peace,1,positive,True
+Germany,Leisure Time and Sports,A World at Peace,2,negative,True
+Germany,Leisure Time and Sports,A World at Peace,2,positive,False
+Germany,Leisure Time and Sports,A World at Peace,3,negative,True
+Germany,Leisure Time and Sports,A World at Peace,3,positive,False
+Germany,Leisure Time and Sports,A World at Peace,4,negative,False
+Germany,Leisure Time and Sports,A World at Peace,4,positive,True
+Germany,Leisure Time and Sports,A World at Peace,5,negative,False
+Germany,Leisure Time and Sports,A World at Peace,5,positive,True
+Germany,Leisure Time and Sports,A World at Peace,6,negative,True
+Germany,Leisure Time and Sports,A World at Peace,6,positive,False
+Germany,Leisure Time and Sports,A World at Peace,7,negative,True
+Germany,Leisure Time and Sports,A World at Peace,7,positive,False
+Germany,Religion,Honest,0,negative,False
+Germany,Religion,Honest,0,positive,True
+Germany,Religion,Honest,1,negative,False
+Germany,Religion,Honest,1,positive,True
+Germany,Religion,Honest,2,negative,True
+Germany,Religion,Honest,2,positive,False
+Germany,Religion,Honest,3,negative,True
+Germany,Religion,Honest,3,positive,False
+Germany,Religion,Honest,4,negative,False
+Germany,Religion,Honest,4,positive,True
+Germany,Religion,Honest,5,negative,False
+Germany,Religion,Honest,5,positive,True
+Germany,Religion,Honest,6,negative,True
+Germany,Religion,Honest,6,positive,False
+Germany,Religion,Honest,7,negative,True
+Germany,Religion,Honest,7,positive,False
+Germany,Social Networks,Honoring of Parents and Elders,0,negative,False
+Germany,Social Networks,Honoring of Parents and Elders,0,positive,True
+Germany,Social Networks,Honoring of Parents and Elders,1,negative,False
+Germany,Social Networks,Honoring of Parents and Elders,1,positive,True
+Germany,Social Networks,Honoring of Parents and Elders,2,negative,True
+Germany,Social Networks,Honoring of Parents and Elders,2,positive,False
+Germany,Social Networks,Honoring of Parents and Elders,3,negative,True
+Germany,Social Networks,Honoring of Parents and Elders,3,positive,False
+Germany,Social Networks,Honoring of Parents and Elders,4,negative,False
+Germany,Social Networks,Honoring of Parents and Elders,4,positive,True
+Germany,Social Networks,Honoring of Parents and Elders,5,negative,False
+Germany,Social Networks,Honoring of Parents and Elders,5,positive,True
+Germany,Social Networks,Honoring of Parents and Elders,6,negative,True
+Germany,Social Networks,Honoring of Parents and Elders,6,positive,False
+Germany,Social Networks,Honoring of Parents and Elders,7,negative,True
+Germany,Social Networks,Honoring of Parents and Elders,7,positive,False
+India,Citizenship,A Varied Life,0,negative,False
+India,Citizenship,A Varied Life,0,positive,True
+India,Citizenship,A Varied Life,1,negative,False
+India,Citizenship,A Varied Life,1,positive,True
+India,Citizenship,A Varied Life,2,negative,True
+India,Citizenship,A Varied Life,2,positive,False
+India,Citizenship,A Varied Life,3,negative,True
+India,Citizenship,A Varied Life,3,positive,False
+India,Citizenship,A Varied Life,4,negative,False
+India,Citizenship,A Varied Life,4,positive,True
+India,Citizenship,A Varied Life,5,negative,False
+India,Citizenship,A Varied Life,5,positive,True
+India,Citizenship,A Varied Life,6,negative,True
+India,Citizenship,A Varied Life,6,positive,False
+India,Citizenship,A Varied Life,7,negative,True
+India,Citizenship,A Varied Life,7,positive,False
+India,Citizenship,Moderate,0,negative,False
+India,Citizenship,Moderate,0,positive,True
+India,Citizenship,Moderate,1,negative,False
+India,Citizenship,Moderate,1,positive,True
+India,Citizenship,Moderate,2,negative,True
+India,Citizenship,Moderate,2,positive,False
+India,Citizenship,Moderate,3,negative,True
+India,Citizenship,Moderate,3,positive,False
+India,Citizenship,Moderate,4,negative,False
+India,Citizenship,Moderate,4,positive,True
+India,Citizenship,Moderate,5,negative,False
+India,Citizenship,Moderate,5,positive,True
+India,Citizenship,Moderate,6,negative,False
+India,Citizenship,Moderate,6,positive,True
+India,Citizenship,Moderate,7,negative,False
+India,Citizenship,Moderate,7,positive,True
+India,Environment,Broad-Minded,0,negative,False
+India,Environment,Broad-Minded,0,positive,True
+India,Environment,Broad-Minded,1,negative,False
+India,Environment,Broad-Minded,1,positive,True
+India,Environment,Broad-Minded,2,negative,True
+India,Environment,Broad-Minded,2,positive,False
+India,Environment,Broad-Minded,3,negative,True
+India,Environment,Broad-Minded,3,positive,False
+India,Environment,Broad-Minded,4,negative,False
+India,Environment,Broad-Minded,4,positive,True
+India,Environment,Broad-Minded,5,negative,False
+India,Environment,Broad-Minded,5,positive,True
+India,Environment,Broad-Minded,6,negative,True
+India,Environment,Broad-Minded,6,positive,False
+India,Environment,Broad-Minded,7,negative,True
+India,Environment,Broad-Minded,7,positive,False
+India,Leisure Time and Sports,Freedom,0,negative,False
+India,Leisure Time and Sports,Freedom,0,positive,True
+India,Leisure Time and Sports,Freedom,1,negative,False
+India,Leisure Time and Sports,Freedom,1,positive,True
+India,Leisure Time and Sports,Freedom,2,negative,True
+India,Leisure Time and Sports,Freedom,2,positive,False
+India,Leisure Time and Sports,Freedom,3,negative,True
+India,Leisure Time and Sports,Freedom,3,positive,False
+India,Leisure Time and Sports,Freedom,4,negative,False
+India,Leisure Time and Sports,Freedom,4,positive,True
+India,Leisure Time and Sports,Freedom,5,negative,False
+India,Leisure Time and Sports,Freedom,5,positive,True
+India,Leisure Time and Sports,Freedom,6,negative,True
+India,Leisure Time and Sports,Freedom,6,positive,False
+India,Leisure Time and Sports,Freedom,7,negative,True
+India,Leisure Time and Sports,Freedom,7,positive,False
+Nigeria,Citizenship,Family Security,0,negative,False
+Nigeria,Citizenship,Family Security,0,positive,True
+Nigeria,Citizenship,Family Security,1,negative,False
+Nigeria,Citizenship,Family Security,1,positive,True
+Nigeria,Citizenship,Family Security,2,negative,True
+Nigeria,Citizenship,Family Security,2,positive,False
+Nigeria,Citizenship,Family Security,3,negative,True
+Nigeria,Citizenship,Family Security,3,positive,False
+Nigeria,Citizenship,Family Security,4,negative,False
+Nigeria,Citizenship,Family Security,4,positive,True
+Nigeria,Citizenship,Family Security,5,negative,False
+Nigeria,Citizenship,Family Security,5,positive,True
+Nigeria,Citizenship,Family Security,6,negative,True
+Nigeria,Citizenship,Family Security,6,positive,False
+Nigeria,Citizenship,Family Security,7,negative,True
+Nigeria,Citizenship,Family Security,7,positive,False
+Nigeria,Religion,Loyal,0,negative,False
+Nigeria,Religion,Loyal,0,positive,True
+Nigeria,Religion,Loyal,1,negative,False
+Nigeria,Religion,Loyal,1,positive,True
+Nigeria,Religion,Loyal,2,negative,True
+Nigeria,Religion,Loyal,2,positive,False
+Nigeria,Religion,Loyal,3,negative,True
+Nigeria,Religion,Loyal,3,positive,False
+Nigeria,Religion,Loyal,4,negative,False
+Nigeria,Religion,Loyal,4,positive,True
+Nigeria,Religion,Loyal,5,negative,False
+Nigeria,Religion,Loyal,5,positive,True
+Nigeria,Religion,Loyal,6,negative,True
+Nigeria,Religion,Loyal,6,positive,False
+Nigeria,Religion,Loyal,7,negative,True
+Nigeria,Religion,Loyal,7,positive,False
+Nigeria,Social Inequality,Humble,0,negative,False
+Nigeria,Social Inequality,Humble,0,positive,True
+Nigeria,Social Inequality,Humble,1,negative,False
+Nigeria,Social Inequality,Humble,1,positive,True
+Nigeria,Social Inequality,Humble,2,negative,True
+Nigeria,Social Inequality,Humble,2,positive,False
+Nigeria,Social Inequality,Humble,3,negative,True
+Nigeria,Social Inequality,Humble,3,positive,False
+Nigeria,Social Inequality,Humble,4,negative,False
+Nigeria,Social Inequality,Humble,4,positive,True
+Nigeria,Social Inequality,Humble,5,negative,False
+Nigeria,Social Inequality,Humble,5,positive,True
+Nigeria,Social Inequality,Humble,6,negative,True
+Nigeria,Social Inequality,Humble,6,positive,False
+Nigeria,Social Inequality,Humble,7,negative,True
+Nigeria,Social Inequality,Humble,7,positive,False
+Nigeria,Work Orientation,Reciprocation of Favors,0,negative,False
+Nigeria,Work Orientation,Reciprocation of Favors,0,positive,True
+Nigeria,Work Orientation,Reciprocation of Favors,1,negative,False
+Nigeria,Work Orientation,Reciprocation of Favors,1,positive,True
+Nigeria,Work Orientation,Reciprocation of Favors,2,negative,True
+Nigeria,Work Orientation,Reciprocation of Favors,2,positive,False
+Nigeria,Work Orientation,Reciprocation of Favors,3,negative,True
+Nigeria,Work Orientation,Reciprocation of Favors,3,positive,False
+Nigeria,Work Orientation,Reciprocation of Favors,4,negative,False
+Nigeria,Work Orientation,Reciprocation of Favors,4,positive,True
+Nigeria,Work Orientation,Reciprocation of Favors,5,negative,False
+Nigeria,Work Orientation,Reciprocation of Favors,5,positive,True
+Nigeria,Work Orientation,Reciprocation of Favors,6,negative,True
+Nigeria,Work Orientation,Reciprocation of Favors,6,positive,False
+Nigeria,Work Orientation,Reciprocation of Favors,7,negative,True
+Nigeria,Work Orientation,Reciprocation of Favors,7,positive,False
+Pakistan,Politics,Social Justice,0,negative,False
+Pakistan,Politics,Social Justice,0,positive,True
+Pakistan,Politics,Social Justice,1,negative,False
+Pakistan,Politics,Social Justice,1,positive,True
+Pakistan,Politics,Social Justice,2,negative,True
+Pakistan,Politics,Social Justice,2,positive,False
+Pakistan,Politics,Social Justice,3,negative,True
+Pakistan,Politics,Social Justice,3,positive,False
+Pakistan,Politics,Social Justice,4,negative,False
+Pakistan,Politics,Social Justice,4,positive,True
+Pakistan,Politics,Social Justice,5,negative,False
+Pakistan,Politics,Social Justice,5,positive,True
+Pakistan,Politics,Social Justice,6,negative,True
+Pakistan,Politics,Social Justice,6,positive,False
+Pakistan,Politics,Social Justice,7,negative,True
+Pakistan,Politics,Social Justice,7,positive,False
+Pakistan,Religion,Family Security,0,negative,False
+Pakistan,Religion,Family Security,0,positive,True
+Pakistan,Religion,Family Security,1,negative,False
+Pakistan,Religion,Family Security,1,positive,True
+Pakistan,Religion,Family Security,2,negative,True
+Pakistan,Religion,Family Security,2,positive,False
+Pakistan,Religion,Family Security,3,negative,True
+Pakistan,Religion,Family Security,3,positive,False
+Pakistan,Religion,Family Security,4,negative,False
+Pakistan,Religion,Family Security,4,positive,True
+Pakistan,Religion,Family Security,5,negative,False
+Pakistan,Religion,Family Security,5,positive,True
+Pakistan,Religion,Family Security,6,negative,True
+Pakistan,Religion,Family Security,6,positive,False
+Pakistan,Religion,Family Security,7,negative,True
+Pakistan,Religion,Family Security,7,positive,False
+Pakistan,Social Inequality,Pleasure,0,negative,False
+Pakistan,Social Inequality,Pleasure,0,positive,True
+Pakistan,Social Inequality,Pleasure,1,negative,False
+Pakistan,Social Inequality,Pleasure,1,positive,True
+Pakistan,Social Inequality,Pleasure,2,negative,True
+Pakistan,Social Inequality,Pleasure,2,positive,False
+Pakistan,Social Inequality,Pleasure,3,negative,True
+Pakistan,Social Inequality,Pleasure,3,positive,False
+Pakistan,Social Inequality,Pleasure,4,negative,False
+Pakistan,Social Inequality,Pleasure,4,positive,True
+Pakistan,Social Inequality,Pleasure,5,negative,False
+Pakistan,Social Inequality,Pleasure,5,positive,True
+Pakistan,Social Inequality,Pleasure,6,negative,True
+Pakistan,Social Inequality,Pleasure,6,positive,False
+Pakistan,Social Inequality,Pleasure,7,negative,True
+Pakistan,Social Inequality,Pleasure,7,positive,False
+Pakistan,Social Networks,Self-Respect,0,negative,False
+Pakistan,Social Networks,Self-Respect,0,positive,True
+Pakistan,Social Networks,Self-Respect,1,negative,False
+Pakistan,Social Networks,Self-Respect,1,positive,True
+Pakistan,Social Networks,Self-Respect,2,negative,True
+Pakistan,Social Networks,Self-Respect,2,positive,False
+Pakistan,Social Networks,Self-Respect,3,negative,True
+Pakistan,Social Networks,Self-Respect,3,positive,False
+Pakistan,Social Networks,Self-Respect,4,negative,False
+Pakistan,Social Networks,Self-Respect,4,positive,True
+Pakistan,Social Networks,Self-Respect,5,negative,False
+Pakistan,Social Networks,Self-Respect,5,positive,True
+Pakistan,Social Networks,Self-Respect,6,negative,True
+Pakistan,Social Networks,Self-Respect,6,positive,False
+Pakistan,Social Networks,Self-Respect,7,negative,True
+Pakistan,Social Networks,Self-Respect,7,positive,False
+Philippines,Environment,Clean,0,negative,False
+Philippines,Environment,Clean,0,positive,True
+Philippines,Environment,Clean,1,negative,False
+Philippines,Environment,Clean,1,positive,True
+Philippines,Environment,Clean,2,negative,True
+Philippines,Environment,Clean,2,positive,False
+Philippines,Environment,Clean,3,negative,True
+Philippines,Environment,Clean,3,positive,False
+Philippines,Environment,Clean,4,negative,False
+Philippines,Environment,Clean,4,positive,True
+Philippines,Environment,Clean,5,negative,False
+Philippines,Environment,Clean,5,positive,True
+Philippines,Environment,Clean,6,negative,True
+Philippines,Environment,Clean,6,positive,False
+Philippines,Environment,Clean,7,negative,True
+Philippines,Environment,Clean,7,positive,False
+Philippines,Family & Changing Gender Roles,Moderate,0,negative,False
+Philippines,Family & Changing Gender Roles,Moderate,0,positive,True
+Philippines,Family & Changing Gender Roles,Moderate,1,negative,False
+Philippines,Family & Changing Gender Roles,Moderate,1,positive,True
+Philippines,Family & Changing Gender Roles,Moderate,2,negative,True
+Philippines,Family & Changing Gender Roles,Moderate,2,positive,False
+Philippines,Family & Changing Gender Roles,Moderate,3,negative,True
+Philippines,Family & Changing Gender Roles,Moderate,3,positive,False
+Philippines,Family & Changing Gender Roles,Moderate,4,negative,False
+Philippines,Family & Changing Gender Roles,Moderate,4,positive,True
+Philippines,Family & Changing Gender Roles,Moderate,5,negative,False
+Philippines,Family & Changing Gender Roles,Moderate,5,positive,True
+Philippines,Family & Changing Gender Roles,Moderate,6,negative,False
+Philippines,Family & Changing Gender Roles,Moderate,6,positive,True
+Philippines,Family & Changing Gender Roles,Moderate,7,negative,False
+Philippines,Family & Changing Gender Roles,Moderate,7,positive,True
+Philippines,Leisure Time and Sports,Meaning in Life,0,negative,False
+Philippines,Leisure Time and Sports,Meaning in Life,0,positive,True
+Philippines,Leisure Time and Sports,Meaning in Life,1,negative,False
+Philippines,Leisure Time and Sports,Meaning in Life,1,positive,True
+Philippines,Leisure Time and Sports,Meaning in Life,2,negative,True
+Philippines,Leisure Time and Sports,Meaning in Life,2,positive,False
+Philippines,Leisure Time and Sports,Meaning in Life,3,negative,True
+Philippines,Leisure Time and Sports,Meaning in Life,3,positive,False
+Philippines,Leisure Time and Sports,Meaning in Life,4,negative,False
+Philippines,Leisure Time and Sports,Meaning in Life,4,positive,True
+Philippines,Leisure Time and Sports,Meaning in Life,5,negative,False
+Philippines,Leisure Time and Sports,Meaning in Life,5,positive,True
+Philippines,Leisure Time and Sports,Meaning in Life,6,negative,True
+Philippines,Leisure Time and Sports,Meaning in Life,6,positive,False
+Philippines,Leisure Time and Sports,Meaning in Life,7,negative,True
+Philippines,Leisure Time and Sports,Meaning in Life,7,positive,False
+Uganda,Citizenship,Social Order,0,negative,True
+Uganda,Citizenship,Social Order,0,positive,False
+Uganda,Citizenship,Social Order,1,negative,True
+Uganda,Citizenship,Social Order,1,positive,False
+Uganda,Citizenship,Social Order,2,negative,True
+Uganda,Citizenship,Social Order,2,positive,False
+Uganda,Citizenship,Social Order,3,negative,True
+Uganda,Citizenship,Social Order,3,positive,False
+Uganda,Citizenship,Social Order,4,negative,True
+Uganda,Citizenship,Social Order,4,positive,False
+Uganda,Citizenship,Social Order,5,negative,True
+Uganda,Citizenship,Social Order,5,positive,False
+Uganda,Citizenship,Social Order,6,negative,False
+Uganda,Citizenship,Social Order,6,positive,True
+Uganda,Citizenship,Social Order,7,negative,False
+Uganda,Citizenship,Social Order,7,positive,True
+Uganda,Health and Health Care,Mature Love,0,negative,False
+Uganda,Health and Health Care,Mature Love,0,positive,True
+Uganda,Health and Health Care,Mature Love,1,negative,False
+Uganda,Health and Health Care,Mature Love,1,positive,True
+Uganda,Health and Health Care,Mature Love,2,negative,True
+Uganda,Health and Health Care,Mature Love,2,positive,False
+Uganda,Health and Health Care,Mature Love,3,negative,True
+Uganda,Health and Health Care,Mature Love,3,positive,False
+Uganda,Health and Health Care,Mature Love,4,negative,False
+Uganda,Health and Health Care,Mature Love,4,positive,True
+Uganda,Health and Health Care,Mature Love,5,negative,False
+Uganda,Health and Health Care,Mature Love,5,positive,True
+Uganda,Health and Health Care,Mature Love,6,negative,True
+Uganda,Health and Health Care,Mature Love,6,positive,False
+Uganda,Health and Health Care,Mature Love,7,negative,True
+Uganda,Health and Health Care,Mature Love,7,positive,False
+Uganda,Leisure Time and Sports,Pleasure,0,negative,False
+Uganda,Leisure Time and Sports,Pleasure,0,positive,True
+Uganda,Leisure Time and Sports,Pleasure,1,negative,False
+Uganda,Leisure Time and Sports,Pleasure,1,positive,True
+Uganda,Leisure Time and Sports,Pleasure,2,negative,True
+Uganda,Leisure Time and Sports,Pleasure,2,positive,False
+Uganda,Leisure Time and Sports,Pleasure,3,negative,True
+Uganda,Leisure Time and Sports,Pleasure,3,positive,False
+Uganda,Leisure Time and Sports,Pleasure,4,negative,False
+Uganda,Leisure Time and Sports,Pleasure,4,positive,True
+Uganda,Leisure Time and Sports,Pleasure,5,negative,False
+Uganda,Leisure Time and Sports,Pleasure,5,positive,True
+Uganda,Leisure Time and Sports,Pleasure,6,negative,True
+Uganda,Leisure Time and Sports,Pleasure,6,positive,False
+Uganda,Leisure Time and Sports,Pleasure,7,negative,True
+Uganda,Leisure Time and Sports,Pleasure,7,positive,False
+Uganda,Social Networks,Preserving my Public Image,0,negative,False
+Uganda,Social Networks,Preserving my Public Image,0,positive,True
+Uganda,Social Networks,Preserving my Public Image,1,negative,False
+Uganda,Social Networks,Preserving my Public Image,1,positive,True
+Uganda,Social Networks,Preserving my Public Image,2,negative,True
+Uganda,Social Networks,Preserving my Public Image,2,positive,False
+Uganda,Social Networks,Preserving my Public Image,3,negative,True
+Uganda,Social Networks,Preserving my Public Image,3,positive,False
+Uganda,Social Networks,Preserving my Public Image,4,negative,False
+Uganda,Social Networks,Preserving my Public Image,4,positive,True
+Uganda,Social Networks,Preserving my Public Image,5,negative,False
+Uganda,Social Networks,Preserving my Public Image,5,positive,True
+Uganda,Social Networks,Preserving my Public Image,6,negative,True
+Uganda,Social Networks,Preserving my Public Image,6,positive,False
+Uganda,Social Networks,Preserving my Public Image,7,negative,True
+Uganda,Social Networks,Preserving my Public Image,7,positive,False
+United Kingdom,Citizenship,A Varied Life,0,negative,False
+United Kingdom,Citizenship,A Varied Life,0,positive,True
+United Kingdom,Citizenship,A Varied Life,1,negative,False
+United Kingdom,Citizenship,A Varied Life,1,positive,True
+United Kingdom,Citizenship,A Varied Life,2,negative,True
+United Kingdom,Citizenship,A Varied Life,2,positive,False
+United Kingdom,Citizenship,A Varied Life,3,negative,True
+United Kingdom,Citizenship,A Varied Life,3,positive,False
+United Kingdom,Citizenship,A Varied Life,4,negative,False
+United Kingdom,Citizenship,A Varied Life,4,positive,True
+United Kingdom,Citizenship,A Varied Life,5,negative,False
+United Kingdom,Citizenship,A Varied Life,5,positive,True
+United Kingdom,Citizenship,A Varied Life,6,negative,True
+United Kingdom,Citizenship,A Varied Life,6,positive,False
+United Kingdom,Citizenship,A Varied Life,7,negative,True
+United Kingdom,Citizenship,A Varied Life,7,positive,False
+United Kingdom,Citizenship,Sense of Belonging,0,negative,False
+United Kingdom,Citizenship,Sense of Belonging,0,positive,True
+United Kingdom,Citizenship,Sense of Belonging,1,negative,False
+United Kingdom,Citizenship,Sense of Belonging,1,positive,True
+United Kingdom,Citizenship,Sense of Belonging,2,negative,True
+United Kingdom,Citizenship,Sense of Belonging,2,positive,False
+United Kingdom,Citizenship,Sense of Belonging,3,negative,True
+United Kingdom,Citizenship,Sense of Belonging,3,positive,False
+United Kingdom,Citizenship,Sense of Belonging,4,negative,False
+United Kingdom,Citizenship,Sense of Belonging,4,positive,True
+United Kingdom,Citizenship,Sense of Belonging,5,negative,False
+United Kingdom,Citizenship,Sense of Belonging,5,positive,True
+United Kingdom,Citizenship,Sense of Belonging,6,negative,True
+United Kingdom,Citizenship,Sense of Belonging,6,positive,False
+United Kingdom,Citizenship,Sense of Belonging,7,negative,True
+United Kingdom,Citizenship,Sense of Belonging,7,positive,False
+United Kingdom,Health and Health Care,Sense of Belonging,0,negative,False
+United Kingdom,Health and Health Care,Sense of Belonging,0,positive,True
+United Kingdom,Health and Health Care,Sense of Belonging,1,negative,False
+United Kingdom,Health and Health Care,Sense of Belonging,1,positive,True
+United Kingdom,Health and Health Care,Sense of Belonging,2,negative,True
+United Kingdom,Health and Health Care,Sense of Belonging,2,positive,False
+United Kingdom,Health and Health Care,Sense of Belonging,3,negative,True
+United Kingdom,Health and Health Care,Sense of Belonging,3,positive,False
+United Kingdom,Health and Health Care,Sense of Belonging,4,negative,False
+United Kingdom,Health and Health Care,Sense of Belonging,4,positive,True
+United Kingdom,Health and Health Care,Sense of Belonging,5,negative,False
+United Kingdom,Health and Health Care,Sense of Belonging,5,positive,True
+United Kingdom,Health and Health Care,Sense of Belonging,6,negative,True
+United Kingdom,Health and Health Care,Sense of Belonging,6,positive,False
+United Kingdom,Health and Health Care,Sense of Belonging,7,negative,True
+United Kingdom,Health and Health Care,Sense of Belonging,7,positive,False
+United Kingdom,Social Inequality,Accepting my Portion in Life,0,negative,True
+United Kingdom,Social Inequality,Accepting my Portion in Life,0,positive,False
+United Kingdom,Social Inequality,Accepting my Portion in Life,1,negative,False
+United Kingdom,Social Inequality,Accepting my Portion in Life,1,positive,True
+United Kingdom,Social Inequality,Accepting my Portion in Life,2,negative,True
+United Kingdom,Social Inequality,Accepting my Portion in Life,2,positive,False
+United Kingdom,Social Inequality,Accepting my Portion in Life,3,negative,False
+United Kingdom,Social Inequality,Accepting my Portion in Life,3,positive,True
+United Kingdom,Social Inequality,Accepting my Portion in Life,4,negative,True
+United Kingdom,Social Inequality,Accepting my Portion in Life,4,positive,False
+United Kingdom,Social Inequality,Accepting my Portion in Life,5,negative,True
+United Kingdom,Social Inequality,Accepting my Portion in Life,5,positive,False
+United Kingdom,Social Inequality,Accepting my Portion in Life,6,negative,False
+United Kingdom,Social Inequality,Accepting my Portion in Life,6,positive,True
+United Kingdom,Social Inequality,Accepting my Portion in Life,7,negative,False
+United Kingdom,Social Inequality,Accepting my Portion in Life,7,positive,True
+United Kingdom,Social Networks,Responsible,0,negative,False
+United Kingdom,Social Networks,Responsible,0,positive,True
+United Kingdom,Social Networks,Responsible,1,negative,False
+United Kingdom,Social Networks,Responsible,1,positive,True
+United Kingdom,Social Networks,Responsible,2,negative,True
+United Kingdom,Social Networks,Responsible,2,positive,False
+United Kingdom,Social Networks,Responsible,3,negative,True
+United Kingdom,Social Networks,Responsible,3,positive,False
+United Kingdom,Social Networks,Responsible,4,negative,False
+United Kingdom,Social Networks,Responsible,4,positive,True
+United Kingdom,Social Networks,Responsible,5,negative,False
+United Kingdom,Social Networks,Responsible,5,positive,True
+United Kingdom,Social Networks,Responsible,6,negative,True
+United Kingdom,Social Networks,Responsible,6,positive,False
+United Kingdom,Social Networks,Responsible,7,negative,True
+United Kingdom,Social Networks,Responsible,7,positive,False
+United States,Health and Health Care,Social Order,0,negative,False
+United States,Health and Health Care,Social Order,0,positive,True
+United States,Health and Health Care,Social Order,1,negative,False
+United States,Health and Health Care,Social Order,1,positive,True
+United States,Health and Health Care,Social Order,2,negative,True
+United States,Health and Health Care,Social Order,2,positive,False
+United States,Health and Health Care,Social Order,3,negative,True
+United States,Health and Health Care,Social Order,3,positive,False
+United States,Health and Health Care,Social Order,4,negative,False
+United States,Health and Health Care,Social Order,4,positive,True
+United States,Health and Health Care,Social Order,5,negative,False
+United States,Health and Health Care,Social Order,5,positive,True
+United States,Health and Health Care,Social Order,6,negative,False
+United States,Health and Health Care,Social Order,6,positive,True
+United States,Health and Health Care,Social Order,7,negative,False
+United States,Health and Health Care,Social Order,7,positive,True
+United States,Leisure Time and Sports,Obedient,0,negative,False
+United States,Leisure Time and Sports,Obedient,0,positive,True
+United States,Leisure Time and Sports,Obedient,1,negative,False
+United States,Leisure Time and Sports,Obedient,1,positive,True
+United States,Leisure Time and Sports,Obedient,2,negative,True
+United States,Leisure Time and Sports,Obedient,2,positive,False
+United States,Leisure Time and Sports,Obedient,3,negative,True
+United States,Leisure Time and Sports,Obedient,3,positive,False
+United States,Leisure Time and Sports,Obedient,4,negative,True
+United States,Leisure Time and Sports,Obedient,4,positive,False
+United States,Leisure Time and Sports,Obedient,5,negative,True
+United States,Leisure Time and Sports,Obedient,5,positive,False
+United States,Leisure Time and Sports,Obedient,6,negative,True
+United States,Leisure Time and Sports,Obedient,6,positive,False
+United States,Leisure Time and Sports,Obedient,7,negative,True
+United States,Leisure Time and Sports,Obedient,7,positive,False
+United States,Leisure Time and Sports,Sense of Belonging,0,negative,False
+United States,Leisure Time and Sports,Sense of Belonging,0,positive,True
+United States,Leisure Time and Sports,Sense of Belonging,1,negative,False
+United States,Leisure Time and Sports,Sense of Belonging,1,positive,True
+United States,Leisure Time and Sports,Sense of Belonging,2,negative,True
+United States,Leisure Time and Sports,Sense of Belonging,2,positive,False
+United States,Leisure Time and Sports,Sense of Belonging,3,negative,True
+United States,Leisure Time and Sports,Sense of Belonging,3,positive,False
+United States,Leisure Time and Sports,Sense of Belonging,4,negative,False
+United States,Leisure Time and Sports,Sense of Belonging,4,positive,True
+United States,Leisure Time and Sports,Sense of Belonging,5,negative,False
+United States,Leisure Time and Sports,Sense of Belonging,5,positive,True
+United States,Leisure Time and Sports,Sense of Belonging,6,negative,True
+United States,Leisure Time and Sports,Sense of Belonging,6,positive,False
+United States,Leisure Time and Sports,Sense of Belonging,7,negative,True
+United States,Leisure Time and Sports,Sense of Belonging,7,positive,False
+United States,National Identity,Responsible,0,negative,False
+United States,National Identity,Responsible,0,positive,True
+United States,National Identity,Responsible,1,negative,False
+United States,National Identity,Responsible,1,positive,True
+United States,National Identity,Responsible,2,negative,True
+United States,National Identity,Responsible,2,positive,False
+United States,National Identity,Responsible,3,negative,True
+United States,National Identity,Responsible,3,positive,False
+United States,National Identity,Responsible,4,negative,False
+United States,National Identity,Responsible,4,positive,True
+United States,National Identity,Responsible,5,negative,False
+United States,National Identity,Responsible,5,positive,True
+United States,National Identity,Responsible,6,negative,True
+United States,National Identity,Responsible,6,positive,False
+United States,National Identity,Responsible,7,negative,True
+United States,National Identity,Responsible,7,positive,False
+United States,Religion,Creativity,0,negative,False
+United States,Religion,Creativity,0,positive,True
+United States,Religion,Creativity,1,negative,False
+United States,Religion,Creativity,1,positive,True
+United States,Religion,Creativity,2,negative,True
+United States,Religion,Creativity,2,positive,False
+United States,Religion,Creativity,3,negative,True
+United States,Religion,Creativity,3,positive,False
+United States,Religion,Creativity,4,negative,False
+United States,Religion,Creativity,4,positive,True
+United States,Religion,Creativity,5,negative,False
+United States,Religion,Creativity,5,positive,True
+United States,Religion,Creativity,6,negative,True
+United States,Religion,Creativity,6,positive,False
+United States,Religion,Creativity,7,negative,True
+United States,Religion,Creativity,7,positive,False
