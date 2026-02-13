@@ -110,7 +110,7 @@ class HFChatModel:
     
 
     @torch.inference_mode()
-    def chat(self, user_prompt: str, temperature: float = 0.2, max_new_tokens: int = 256) -> str:
+    def chat(self, user_prompt: str, temperature: float = 0.2, max_new_tokens: int = 1024) -> str:
         if self.use_vllm:
             return self._chat_vllm(user_prompt, temperature, max_new_tokens)
         # Llama-3 Instruct: chat template
