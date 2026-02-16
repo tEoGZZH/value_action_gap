@@ -42,7 +42,7 @@ def eval_value_statement(value, country, topic, outputs):
         print(f"========{prompt_index}: {positive_action_prompt} \n" )
         # generated_value_statement = gpt_generation_gpt4o_mini(positive_action_prompt)
         # generated_value_statement = gpt_generation_mistral(positive_action_prompt)
-        text = hf_model.chat(positive_action_prompt, temperature=0.2, max_new_tokens=256)
+        text = hf_model.chat(positive_action_prompt, temperature=0.2, max_new_tokens=1024)
 
         # Append results to outputs dictionary
         outputs['country'].append(country)
