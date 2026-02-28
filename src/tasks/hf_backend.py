@@ -6,26 +6,27 @@ import requests
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from pydantic import BaseModel
 from enum import Enum
+import asyncio
+import httpx
 
-
-EVAL_JSON_SCHEMA = {
-    "name": "task2_output",
-    "strict": True,
-    "schema": {
-        "type": "object",
-        "properties": {
-            "action": {
-                "type": "string",
-                "enum": ["Option 1", "Option 2"],
-            },
-            "reason": {
-                "type": "string",
-            },
-        },
-        "required": ["action", "reason"],
-        "additionalProperties": False,
-    },
-}
+# EVAL_JSON_SCHEMA = {
+#     "name": "task2_output",
+#     "strict": True,
+#     "schema": {
+#         "type": "object",
+#         "properties": {
+#             "action": {
+#                 "type": "string",
+#                 "enum": ["Option 1", "Option 2"],
+#             },
+#             "reason": {
+#                 "type": "string",
+#             },
+#         },
+#         "required": ["action", "reason"],
+#         "additionalProperties": False,
+#     },
+# }
 
 
 class Options(str, Enum):
@@ -69,6 +70,45 @@ class HFChatModel:
         )
         self.model.eval()
 
+    async def _post_one(self, client, prompt, temperature, max_new_tokens):
+        base = (self.vllm_base_url or "").rstrip("/")
+        url = f"{base}/v1/chat/completions"
+        payload = {
+            "model": self.vllm_model,
+            "messages": [{"role": "user", "content": prompt}],
+            # OpenAI naming: max_tokens
+            "max_tokens": int(max_new_tokens),
+            "temperature": float(temperature),
+            "top_p": 0.9,
+            "response_format": {
+                "type": "json_schema",
+                "json_schema": {
+                    "name": "task2_output",
+                    "strict": True,
+                    "schema": Task2Output.model_json_schema(),
+                }
+            },
+        }
+        r = await client.post(url, json=payload, timeout=120)
+        r.raise_for_status()
+        data = r.json()
+        return data["choices"][0]["message"]["content"].strip()
+    
+    async def _chat_vllm_batch_async(self, prompts, temperature=0.2, max_new_tokens=256, concurrency=32):
+        limits = httpx.Limits(max_connections=concurrency, max_keepalive_connections=concurrency)
+        async with httpx.AsyncClient(limits=limits) as client:
+            sem = asyncio.Semaphore(concurrency)
+            async def run_one(p):
+                async with sem:
+                    return await self._post_one(client, p, temperature, max_new_tokens)
+
+            tasks = [run_one(p) for p in prompts]
+            return await asyncio.gather(*tasks)
+    
+    def chat_batch(self, prompts, temperature=0.2, max_new_tokens=256, concurrency=32):
+        return asyncio.run(self._chat_vllm_batch_async(
+            prompts, temperature=temperature, max_new_tokens=max_new_tokens, concurrency=concurrency
+        ))
 
     def _chat_vllm(self, user_prompt: str, temperature: float, max_new_tokens: int) -> str:
         """Call a vLLM OpenAI-compatible server and return assistant message text."""
@@ -91,7 +131,6 @@ class HFChatModel:
                     "schema": Task2Output.model_json_schema(),
                 }
             },
-            "max_tokens": 512,
         }
 
         resp = requests.post(url, json=payload, timeout=self.vllm_timeout_s)
@@ -102,9 +141,9 @@ class HFChatModel:
         data = resp.json()
 
         # Info for debugging: print the full response and the content we will return.
-        choice0 = data["choices"][0]
-        print("finish_reason:", choice0.get("finish_reason"))
-        print("content repr:", repr(choice0["message"]["content"]))
+        # choice0 = data["choices"][0]
+        # print("finish_reason:", choice0.get("finish_reason"))
+        # print("content repr:", repr(choice0["message"]["content"]))
 
         return data["choices"][0]["message"]["content"].strip()
     

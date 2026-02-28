@@ -13,6 +13,7 @@ import numpy as np
 
 from tasks.hf_backend import HFChatModel
 import argparse
+import time
 hf_model = None
 
 # MODEL = "openai:gpt-4o"
@@ -70,23 +71,38 @@ def eval_value_action(country, topic, value, option1, option2):
         "evaluation_7": None,
     }
 
-    for prompt_index in tqdm(range(8)):
-        # print(f"Generating prompt index: {prompt_index}")
+    # for prompt_index in tqdm(range(8)):
+    #     # print(f"Generating prompt index: {prompt_index}")
+    #     action_prompt = prompting_method.generate_prompt(country=country, topic=topic, value=value, option1=option1, option2=option2, index=prompt_index)
+    #     # print(f"After generating action_prompt")
+    #     # response = client.chat.completions.create(
+    #     #     model=MODEL,
+    #     #     messages=[{"role": "user", "content": action_prompt[0]}],
+    #     #     temperature=0.2
+    #     # )
+    #     text = hf_model.chat(action_prompt[0], temperature=0.2, max_new_tokens=256)
+    #     # print(f"After getting response from model")
+    #     try:
+    #         r = parse_model_output(text, hf_model.use_vllm)
+    #     except:
+    #         raise ValueError(f"Failed to parse response: {text}")
+    #     outputs[f"evaluation_{prompt_index}"] = r
+    #     print(f"{prompt_index} r={r}", )
+
+    prompts = []
+    for prompt_index in range(8):
         action_prompt = prompting_method.generate_prompt(country=country, topic=topic, value=value, option1=option1, option2=option2, index=prompt_index)
-        # print(f"After generating action_prompt")
-        # response = client.chat.completions.create(
-        #     model=MODEL,
-        #     messages=[{"role": "user", "content": action_prompt[0]}],
-        #     temperature=0.2
-        # )
-        text = hf_model.chat(action_prompt[0], temperature=0.2, max_new_tokens=256)
-        # print(f"After getting response from model")
+        prompts.append(action_prompt)
+    texts = hf_model.chat_batch(prompts, temperature=0.2, max_new_tokens=512, concurrency=32)
+
+    for prompt_index, text in enumerate(texts):
         try:
             r = parse_model_output(text, hf_model.use_vllm)
         except:
             raise ValueError(f"Failed to parse response: {text}")
         outputs[f"evaluation_{prompt_index}"] = r
         print(f"{prompt_index} r={r}", )
+
     return outputs
 
 
@@ -114,17 +130,27 @@ def main():
         filtered_df.to_csv(args.out_csv, index=False)
         
     else:
-        df = pd.read_csv("/home/zs473554/projects/value_action_gap/src/outputs/filtered_sample_value_action_evaluation_gpt_4o_mini.csv")
-        # df = pd.read_csv("/home/zs473554/projects/value_action_gap/src/outputs/full_data/value_action_gap_full_data_gpt_4o_generation.csv")
+        # df = pd.read_csv("/home/zs473554/projects/value_action_gap/src/outputs/filtered_sample_value_action_evaluation_gpt_4o_mini.csv")
+        df = pd.read_csv("/home/zs473554/projects/value_action_gap/src/outputs/full_data/value_action_gap_full_data_gpt_4o_generation.csv")
 
         results = []
         # Group by country, topic, and absolute value to pair opposite polarities
         grouped = df.groupby(['country', 'topic', 'value'])
 
+        # Time info
+        total_groups = grouped.ngroups         
+        done = 0                                
+        skipped_len = 0
+        skipped_parse = 0
+        t0 = time.perf_counter()
+        last_print = t0
+        PRINT_EVERY_S = 5.0
+
         for (country, topic, value), group in grouped:
             # Skip if we don't have exactly 2 rows (positive and negative polarity)
 
             if len(group) != 2:
+                skipped_len += 1
                 print("== skip len(group)!=1 ==")
                 continue
                 
@@ -139,11 +165,13 @@ def main():
                 option1 = parse_json(group.iloc[0]['generation_prompt'])["Human Action"]  # negative polarity
                 option2 = parse_json(group.iloc[1]['generation_prompt'])["Human Action"]  # positive polarity\n")
             except:
+                skipped_parse += 1
                 continue
             # print("After parsing options")
             outputs = eval_value_action(country=country, topic=topic, value=value, option1=option1, option2=option2)
             # print("After eval_value_action")
             results.append(outputs)
+            done += 1
             
             # print(f"========{country}-{topic}-{value} done \n")
             cases = [(0,0,0), (0,0,1), (0,1,0), (0,1,1), (1,0,0), (1,0,1), (1,1,0), (1,1,1)]
@@ -161,6 +189,21 @@ def main():
                 if outputs[f"evaluation_{i}"]["action"] == "Option 2":
                     print(f"Prompt {cases[i]} \n")
             print("===========")
+
+            now = time.perf_counter()
+            if (now - last_print) >= PRINT_EVERY_S:
+                elapsed = now - t0
+                rate = done / elapsed if elapsed > 0 else 0.0
+
+                remaining_est = max(total_groups - (done + skipped_len + skipped_parse), 0)
+                eta = remaining_est / rate if rate > 0 else float("inf")
+
+                print(
+                    f"[done={done} | seen={done + skipped_len + skipped_parse} / total_groups={total_groups}] "
+                    f"elapsed={elapsed:.1f}s | rate={rate:.3f} groups/s | eta~={eta:.0f}s | "
+                    f"skipped_len={skipped_len} skipped_parse={skipped_parse}"
+                )
+                last_print = now
 
 
         result_df = pd.DataFrame(results)
