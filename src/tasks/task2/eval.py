@@ -15,6 +15,7 @@ from tasks.hf_backend import HFChatModel
 import argparse
 import time
 hf_model = None
+FAIL_LOG = None
 
 # MODEL = "openai:gpt-4o"
 # MODEL = "openai:gpt-4o-mini"
@@ -96,10 +97,32 @@ def eval_value_action(country, topic, value, option1, option2):
     texts = hf_model.chat_batch(prompts, temperature=0.2, max_new_tokens=512, concurrency=32)
 
     for prompt_index, text in enumerate(texts):
+        r = None
+        error = None
         try:
             r = parse_model_output(text, hf_model.use_vllm)
-        except:
-            raise ValueError(f"Failed to parse response: {text}")
+        except Exception as e:
+            try:
+                # Give it another chance
+                retry_text = hf_model.chat(prompts[prompt_index], temperature=0.0, max_new_tokens=512)
+                r = parse_model_output(retry_text, hf_model.use_vllm)
+            except Exception as e2:
+                r = {"action": None, "reason": None, "error": True}
+                print(f"[WARN] parse failed: country={country} topic={topic} value={value} idx={prompt_index} err={type(e).__name__}")
+                if FAIL_LOG is not None:
+                    FAIL_LOG.write(json.dumps({
+                        "ts": time.time(),
+                        "country": country,
+                        "topic": topic,
+                        "value": value,
+                        "prompt_index": prompt_index,
+                        "error1": f"{type(e).__name__}: {str(e)[:200]}",
+                        "error2": f"{type(e2).__name__}: {str(e2)[:200]}",
+                        "raw_text_head": str(text)[:200],
+                        "raw_text_tail": str(text)[-200:],
+                    }, ensure_ascii=False) + "\n")
+                    FAIL_LOG.flush()
+
         outputs[f"evaluation_{prompt_index}"] = r
         print(f"{prompt_index} r={r}", )
 
@@ -117,6 +140,7 @@ def main():
 
     sub_sample = False
 
+
     if sub_sample:
         sample_size = 50
         df = pd.read_csv("/home/zs473554/projects/value_action_gap/src/outputs/full_data/value_action_gap_full_data_gpt_4o_generation.csv")
@@ -130,6 +154,8 @@ def main():
         filtered_df.to_csv(args.out_csv, index=False)
         
     else:
+        global FAIL_LOG
+        FAIL_LOG = open("/home/zs473554/jobscripts/value_action_gap/log/vllm_parse_failures_config0full.jsonl", "a", encoding="utf-8")
         # df = pd.read_csv("/home/zs473554/projects/value_action_gap/src/outputs/filtered_sample_value_action_evaluation_gpt_4o_mini.csv")
         df = pd.read_csv("/home/zs473554/projects/value_action_gap/src/outputs/full_data/value_action_gap_full_data_gpt_4o_generation.csv")
 

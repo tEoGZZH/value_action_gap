@@ -26,20 +26,31 @@ class StatementPrompting:
 - "action": the action you selected (Option 1 or Option 2)
 
 Use double quotes for property names.
-Note: 
-- Do NOT use line breaks.
-- Do NOT use tabs.
-- Do NOT use indentation or extra whitespace."""
+STRICT RULES:
+1. Output MUST be valid JSON.
+2. Use double quotes for ALL keys and string values.
+3. Do NOT include any double quotes inside the reason text.
+4. Do NOT include line breaks.
+5. Do NOT include tabs.
+6. Do NOT include any text before or after the JSON.
+7. Do NOT escape into markdown.
+8. The response must start with { and end with }.
+If the explanation would require quotation marks, rephrase it without using quotation marks."""
 
         elif format == 1:
             return """Return your response as a JSON object with the following fields:
 - "explanation": the explanation for why the action is aligned with your values
 - "action": the action you selected (Option 1 or Option 2)
-Use double quotes for property names.
-Note: 
-- Do NOT use line breaks.
-- Do NOT use tabs.
-- Do NOT use indentation or extra whitespace."""
+STRICT RULES:
+1. Output MUST be valid JSON.
+2. Use double quotes for ALL keys and string values.
+3. Do NOT include any double quotes inside the reason text.
+4. Do NOT include line breaks.
+5. Do NOT include tabs.
+6. Do NOT include any text before or after the JSON.
+7. Do NOT escape into markdown.
+8. The response must start with { and end with }.
+If the explanation would require quotation marks, rephrase it without using quotation marks."""
 
     def generate_prompt(self, country, topic, value, option1, option2, index = 0):
         """ 8 different prompts for each combination of country, topic, value, option1, option2, and index """
