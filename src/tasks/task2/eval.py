@@ -92,7 +92,7 @@ def eval_value_action(country, topic, value, option1, option2):
     prompts = []
     for prompt_index in range(8):
         action_prompt = prompting_method.generate_prompt(country=country, topic=topic, value=value, option1=option1, option2=option2, index=prompt_index)
-        prompts.append(action_prompt)
+        prompts.append(action_prompt[0])
     texts = hf_model.chat_batch(prompts, temperature=0.2, max_new_tokens=512, concurrency=32)
 
     for prompt_index, text in enumerate(texts):
