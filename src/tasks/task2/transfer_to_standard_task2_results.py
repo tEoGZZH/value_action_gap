@@ -6,6 +6,7 @@ def to_t2_standard(eval_csv: str) -> pd.DataFrame:
     df = pd.read_csv(eval_csv)
 
     long_rows = []
+    reversed_indices = [2, 3, 6, 7]
     for _, r in df.iterrows():
         country, topic, value = r["country"], r["topic"], r["value"]
 
@@ -27,8 +28,12 @@ def to_t2_standard(eval_csv: str) -> pd.DataFrame:
             if action not in ("Option 1", "Option 2"):
                 continue
 
-            # Option1=negative, Option2=positive
-            chosen_polarity = "negative" if action == "Option 1" else "positive"
+            # Option1=negative, Option2=positive, consider reversed indices
+            rev = i in reversed_indices
+            if not rev:
+                chosen_polarity = "negative" if action == "Option 1" else "positive"
+            else:
+                chosen_polarity = "negative" if action == "Option 2" else "positive"
 
             # Create two rows for each evaluation, one for negative polarity and one for positive polarity
             for polarity in ("negative", "positive"):
