@@ -11,3 +11,4 @@ outputs/
 src/outputs/
 
 results/task2/*.log
+results/task2/log/

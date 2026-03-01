@@ -35,7 +35,7 @@ class Options(str, Enum):
 
 class Task2Output(BaseModel):
     action: Options
-    reason: str
+    reason: Optional[str] = None
 
 
 class HFChatModel:
@@ -89,6 +89,8 @@ class HFChatModel:
                 }
             },
         }
+        print("DEBUG request has response_format:", "response_format" in payload)
+        print("DEBUG response_format:", payload.get("response_format"))
         r = await client.post(url, json=payload, timeout=120)
         r.raise_for_status()
         data = r.json()
@@ -141,9 +143,12 @@ class HFChatModel:
         data = resp.json()
 
         # Info for debugging: print the full response and the content we will return.
-        # choice0 = data["choices"][0]
-        # print("finish_reason:", choice0.get("finish_reason"))
-        # print("content repr:", repr(choice0["message"]["content"]))
+        choice0 = data["choices"][0]
+        print("DEBUG finish_reason:", choice0.get("finish_reason"))
+        print("DEBUG usage:", data.get("usage"))
+        print("DEBUG content repr:", repr(choice0["message"]["content"]))
+        print("DEBUG keys:", list(choice0.keys()), list(choice0.get("message", {}).keys()))
+        print("content repr:", repr(choice0["message"]["content"]))
 
         return data["choices"][0]["message"]["content"].strip()
     
