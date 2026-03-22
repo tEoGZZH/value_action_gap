@@ -157,7 +157,11 @@ class HFChatModel:
     def chat(self, user_prompt: str, temperature: float = 0.2, max_new_tokens: int = 1024) -> str:
         if self.use_vllm:
             return self._chat_vllm(user_prompt, temperature, max_new_tokens)
-        # Llama-3 Instruct: chat template
+        # Use tulu3 chat template if using base model
+        if getattr(self.tokenizer, "chat_template", None) is None:
+            tulu_tok = AutoTokenizer.from_pretrained("allenai/Llama-3.1-Tulu-3-8B")
+            self.tokenizer.chat_template = tulu_tok.chat_template
+
         messages = [{"role": "user", "content": user_prompt}]
         input_ids = self.tokenizer.apply_chat_template(
             messages,
