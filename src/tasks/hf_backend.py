@@ -91,10 +91,28 @@ class HFChatModel:
         }
         print("DEBUG request has response_format:", "response_format" in payload)
         print("DEBUG response_format:", payload.get("response_format"))
-        r = await client.post(url, json=payload, timeout=120)
-        r.raise_for_status()
-        data = r.json()
-        return data["choices"][0]["message"]["content"].strip()
+        retries = 3
+        for attempt in range(retries):
+            try:
+                r = await client.post(url, json=payload, timeout=timeout)
+                r.raise_for_status()
+                data = r.json()
+                return data["choices"][0]["message"]["content"].strip()
+
+            except (httpx.RemoteProtocolError, httpx.ReadTimeout, httpx.ConnectError) as e:
+                print(f"Attempt {attempt + 1}/{retries} failed with retryable error: {repr(e)}")
+                if attempt == retries - 1:
+                    raise
+                await asyncio.sleep(0.5 * (2 ** attempt) + random.uniform(0, 0.3))
+
+            except httpx.HTTPStatusError as e:
+                status = e.response.status_code
+                print(f"Attempt {attempt + 1}/{retries} got HTTP {status}: {e}")
+
+                if status >= 500 and attempt < retries - 1:
+                    await asyncio.sleep(0.5 * (2 ** attempt) + random.uniform(0, 0.3))
+                    continue
+                raise
     
     async def _chat_vllm_batch_async(self, prompts, temperature=0.2, max_new_tokens=256, concurrency=32):
         limits = httpx.Limits(max_connections=concurrency, max_keepalive_connections=concurrency)
