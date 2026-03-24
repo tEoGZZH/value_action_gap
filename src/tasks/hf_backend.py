@@ -8,6 +8,7 @@ from pydantic import BaseModel
 from enum import Enum
 import asyncio
 import httpx
+import random
 
 # EVAL_JSON_SCHEMA = {
 #     "name": "task2_output",
