@@ -94,7 +94,7 @@ class HFChatModel:
         retries = 3
         for attempt in range(retries):
             try:
-                r = await client.post(url, json=payload, timeout=timeout)
+                r = await client.post(url, json=payload, timeout=120)
                 r.raise_for_status()
                 data = r.json()
                 return data["choices"][0]["message"]["content"].strip()
